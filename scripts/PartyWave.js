@@ -2,13 +2,14 @@ const React = require('react');
 const Header = require('./Header');
 const HeroImage = require('./HeroImage');
 const About = require('./About');
+const request = require('browser-request')
 require("../styles/PartyWave.css");
 
 const PartyWave = React.createClass({
 
   getInitialState() {
       return {
-        route: window.location.hash.substr(1)
+        route: window.location.hash.substr(1),
       }
   },
 
@@ -17,7 +18,22 @@ const PartyWave = React.createClass({
       this.setState({
         route: window.location.hash.substr(1)
       })
-    })
+    }),
+    this.fetchSpots();
+  },
+
+  fetchSpots(){
+    let spots;
+    let _this = this;
+    request({method:'GET', url:'http://combo.azurewebsites.net/spots/', body:'{"relaxed":true}', json:true}, on_response);
+
+    function on_response(er, response, body) {
+      if(er){
+        throw er;
+      }else {
+        _this.setState({spots: body});
+      }
+    }
   },
 
   render() {
