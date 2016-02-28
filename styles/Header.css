@@ -47,6 +47,7 @@ header a {
 	font-weight: bold;
 }
 
-header a:hover {
-	color: #fff;
+.selected {
+	color : #fff;
+	border-bottom: 2px solid #fff;
 }

@@ -21,12 +21,6 @@ const PartyWave = React.createClass({
   },
 
   render() {
-    switch (this.state.route) {
-      case '/': break;
-      case '/spots': break;
-      case '/about': break;
-    }
-
     let Child
     switch (this.state.route) {
       case '/spots': Child = HeroImage; break;
@@ -34,9 +28,12 @@ const PartyWave = React.createClass({
       default:      Child = HeroImage;
     }
 
+    let route = this.state.route;
+
 	return(
 		<div>
-			<Header/>
+			<Header
+				route={route}/>
 			<div>
 				<Child/>
 			</div>
@@ -47,54 +44,3 @@ const PartyWave = React.createClass({
 });
 
 module.exports = PartyWave;
-
-
-/*
-var App = React.createClass({
-  getInitialState(){
-    let	storyData = this.loadData();
-    let selectedStory = null;
-    let selectedStories = 0;
-
-    return{
-      storyData: storyData,
-      selectedStory: selectedStory,
-      selectedStories: selectedStories
-    };
-  },
-  loadData(){
-  	return require("json!../Data/stories.json");
-  },
-  selectStory(selectedStory){
-  	var selectedStory = selectedStory;
-    var selectedStories = this.state.selectedStories;
-
-    if (!selectedStory["selected"]) {
-      selectedStories++;
-      selectedStory["selected"] = true;
-    }
-    this.setState({selectedStory:selectedStory, selectedStories:selectedStories});
-  },
-  render(){
-  	var storyData = this.state.storyData;
-  	var selectedStory = this.state.selectedStory;
-  	var selectedStories = this.state.selectedStories;
-  	var selectStory = this.selectStory;
-
-    return (
-      <div className="app-container">
-      	<Header/>
-        <Findings
-          storyData={storyData}/>
-        <Recommendations/>
-      	<StorySelectors 
-      		storyData={storyData}
-      		selectedStory={selectedStory}
-      		selectedStories={selectedStories}
-      		selectStory={selectStory}/>
-      	<Footer/>
-      </div>
-    )
-  }
-});
-*/
