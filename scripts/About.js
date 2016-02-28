@@ -5,7 +5,7 @@ require("../styles/About.css");
 const About = React.createClass({
   render(){
     return (
-      <div>About</div>
+      <div></div>
     )
   }
 });

@@ -21,7 +21,6 @@ const PartyWave = React.createClass({
   },
 
   render() {
-  	
     switch (this.state.route) {
       case '/': break;
       case '/spots': break;
