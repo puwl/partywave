@@ -1,3 +1,8 @@
 .heroimage {
 	background: #fff url('/../images/hero.jpg') no-repeat fixed center;
 }
+
+.heroimage {
+	width: 100%;
+    min-height: 100vh;
+}

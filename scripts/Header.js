@@ -6,11 +6,13 @@ const Header = React.createClass({
     return (
       <header>
       	<nav>
-			<ul>
-				<li><a href="#/spots">Spots</a></li>
-				<li><a href="#/about">About</a></li>
-				<li><a href="#/">PartyWave</a></li>
-			</ul>
+      		<div className="navlinksleft">
+				<a href="#/spots">Spots</a>
+				<a href="#/about">About</a>
+			</div>
+			<div className="navlinksright">
+				<a href="#/"><img src='../images/PW_logo.svg'></img></a>
+			</div>
 		</nav>
       </header>
     )

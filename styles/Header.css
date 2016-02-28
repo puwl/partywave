@@ -1,0 +1,52 @@
+header {
+	position: fixed;
+	height: 100px;
+	opacity: 0.8;
+	background-color: #000;
+	width: 100%;
+	text-transform: uppercase;
+	z-index: 1000;
+}
+
+nav {
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 100%;
+    position: relative;
+}
+
+.navlinksleft, .navlinksright {
+	display: inline-block;
+}
+
+.navlinksleft {
+	width: 49%;
+	text-align: left;
+    vertical-align: bottom;
+    padding-bottom: 0.5em;
+}
+
+.navlinksright {
+	width: 49%;
+	text-align: right;
+}
+
+.navlinksright img {
+	height: 90px;
+}
+
+.navlinksright a {
+	display: inline-block;
+    width: 0;
+}
+
+header a {
+	text-decoration: none;
+	margin-right: 5em;
+	color: rgb(255, 219, 38);
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #fff;
+}

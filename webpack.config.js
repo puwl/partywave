@@ -22,7 +22,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.jpg']
+    extensions: ['', '.js', '.jsx', '.jpg', 'png']
   },
 
   module: {
