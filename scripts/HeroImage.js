@@ -4,7 +4,7 @@ require("../styles/HeroImage.css");
 const HeroImage = React.createClass({
   render(){
     return (
-      <div></div>
+      <div className="heroimage"></div>
     )
   }
 });

@@ -22,7 +22,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.jpg']
   },
 
   module: {
@@ -32,7 +32,8 @@ module.exports = {
         loaders: ['react-hot', 'babel?presets[]=es2015&presets[]=react'],
         include: [path.resolve('scripts')]
       },
-      {test: /\.css$/, loaders: ['style-loader', 'css-loader']}
+      {test: /\.css$/, loaders: ['style-loader', 'css-loader']},
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' } // inline base64 URLs for <=8k images, direct URLs for the rest
     ]
   },
   stats: {
