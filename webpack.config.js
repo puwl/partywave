@@ -31,7 +31,8 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'babel?presets[]=es2015&presets[]=react'],
         include: [path.resolve('scripts')]
-      }
+      },
+      {test: /\.css$/, loaders: ['style-loader', 'css-loader']}
     ]
   },
   stats: {
