@@ -51,3 +51,11 @@ header a {
 	color : #fff;
 	border-bottom: 2px solid #fff;
 }
+
+.spotslist.show{
+	display: visible;
+}
+
+.spotslist.hide {
+	display: none;
+}
