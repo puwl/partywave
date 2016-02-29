@@ -36,6 +36,20 @@ const PartyWave = React.createClass({
     }
   },
 
+  fetchSpotReports(spot){
+    request({method:'GET', url:'http://combo.azurewebsites.net/spots/#{spot}', body:'{"relaxed":true}', json:true}, on_response);
+    let _this = this;
+    function on_response(er, response, body) {
+      if(er){
+        throw er;
+      }else {
+        console.log(body)
+        _this.setState({reports:body});
+      }
+    }
+
+  },
+
   render() {
     let Child
     switch (this.state.route) {

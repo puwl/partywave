@@ -9,7 +9,13 @@ const Header = React.createClass({
     let spotsList = [];
     if (spots != null) {
       for (var i = 0; i < spots.length; i++) {
-        spotsList.push(<li key={i}>{spots[i]}</li>);
+        let spotPath = `${this.props.route}/${spots[i].toLowerCase().replace(/\s/g, '')}`;
+        console.log(spotPath);
+        spotsList.push(
+          <li key={i}>
+            <a href={spotPath}>{spots[i]}</a>
+          </li>
+        );
       };
     }
     return spotsList;
