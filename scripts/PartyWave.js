@@ -9,7 +9,7 @@ const PartyWave = React.createClass({
 
   getInitialState() {
       return {
-        route: window.location.hash.substr(1),
+        route: window.location.hash.substr(1)
       }
   },
 
@@ -19,19 +19,19 @@ const PartyWave = React.createClass({
         route: window.location.hash.substr(1)
       })
     }),
+
     this.fetchSpots();
   },
 
   fetchSpots(){
-    let spots;
-    let _this = this;
     request({method:'GET', url:'http://combo.azurewebsites.net/spots/', body:'{"relaxed":true}', json:true}, on_response);
-
+    let _this = this;
     function on_response(er, response, body) {
       if(er){
         throw er;
       }else {
-        _this.setState({spots: body});
+        console.log(body)
+        _this.setState({spots:body});
       }
     }
   },
@@ -45,16 +45,18 @@ const PartyWave = React.createClass({
     }
 
     let route = this.state.route;
+    let spots = this.state.spots;
 
-	return(
-		<div>
-			<Header
-				route={route}/>
-			<div>
-				<Child/>
-			</div>
-		</div>
-	)
+  	return(
+  		<div>
+  			<Header
+  				route={route}
+          spots={spots}/>
+  			<div>
+  				<Child/>
+  			</div>
+  		</div>
+  	)
   }
 
 });
