@@ -1,6 +1,7 @@
 const React = require('react');
 const Header = require('./Header');
 const HeroImage = require('./HeroImage');
+const Reports = require('./Reports');
 const About = require('./About');
 const request = require('browser-request')
 require("../styles/PartyWave.css");
@@ -37,6 +38,7 @@ const PartyWave = React.createClass({
   },
 
   fetchSpotReports(spot){
+    spot = spot.toLowerCase().replace(/\s/g, '');
     request({method:'GET', url:'http://combo.azurewebsites.net/spots/#{spot}', body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
     function on_response(er, response, body) {
@@ -54,6 +56,9 @@ const PartyWave = React.createClass({
     let Child
     switch (this.state.route) {
       case '/spots': Child = HeroImage; break;
+      //case '/spots/easternbeaches': Child = Reports; break;
+      //case '/spots/northernbeaches': Child = Reports; break;
+      //case '/spots/batemansbay': Child = Reports; break;
       case '/about': Child = About; break;
       default:      Child = HeroImage;
     }
