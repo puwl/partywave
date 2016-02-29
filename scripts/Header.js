@@ -4,16 +4,20 @@ require("../styles/Header.css");
 
 const Header = React.createClass({
 
+  handleSpotClick(e){
+    let spot = e.currentTarget.innerHTML;
+    this.props.fetchSpotReports(spot);
+  },
+
   spotsList(){
     let spots = this.props.spots;
     let spotsList = [];
     if (spots != null) {
       for (var i = 0; i < spots.length; i++) {
-        let spotPath = `#${this.props.route}/${spots[i].toLowerCase().replace(/\s/g, '')}`;
-        console.log(spotPath);
+        let spot = spots[i];
         spotsList.push(
-          <li key={i}>
-            <a href={spotPath}>{spots[i]}</a>
+          <li key={spot} onClick={this.handleSpotClick}>
+            {spot}
           </li>
         );
       };

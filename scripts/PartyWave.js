@@ -39,6 +39,7 @@ const PartyWave = React.createClass({
 
   fetchSpotReports(spot){
     spot = spot.toLowerCase().replace(/\s/g, '');
+    let spotPath = `#${this.state.route}/${spot}`;
     request({method:'GET', url:'http://combo.azurewebsites.net/spots/#{spot}', body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
     function on_response(er, response, body) {
@@ -47,6 +48,7 @@ const PartyWave = React.createClass({
       }else {
         console.log(body)
         _this.setState({reports:body});
+        _this.setState({route: spotPath})
       }
     }
 
@@ -70,7 +72,8 @@ const PartyWave = React.createClass({
   		<div>
   			<Header
   				route={route}
-          spots={spots}/>
+          spots={spots}
+          fetchSpotReports={this.fetchSpotReports}/>
   			<div>
   				<Child/>
   			</div>
