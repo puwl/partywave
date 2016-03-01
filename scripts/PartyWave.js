@@ -31,7 +31,6 @@ const PartyWave = React.createClass({
       if(er){
         throw er;
       }else {
-        console.log(body)
         _this.setState({spots:body});
       }
     }
@@ -40,27 +39,26 @@ const PartyWave = React.createClass({
   fetchSpotReports(spot){
     spot = spot.toLowerCase().replace(/\s/g, '');
     let spotPath = `#${this.state.route}/${spot}`;
-    request({method:'GET', url:'http://combo.azurewebsites.net/spots/#{spot}', body:'{"relaxed":true}', json:true}, on_response);
+    let url = `http:\/\/combo.azurewebsites.net/spots/${spot}`;
+    request({method:'GET', url:url, body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
     function on_response(er, response, body) {
       if(er){
         throw er;
       }else {
-        console.log(body)
         _this.setState({reports:body});
-        _this.setState({route: spotPath})
+        window.location.href = spotPath;
       }
     }
-
   },
 
   render() {
     let Child
     switch (this.state.route) {
       case '/spots': Child = HeroImage; break;
-      //case '/spots/easternbeaches': Child = Reports; break;
-      //case '/spots/northernbeaches': Child = Reports; break;
-      //case '/spots/batemansbay': Child = Reports; break;
+      case '/spots/easternbeaches': Child = Reports; break;
+      case '/spots/northernbeaches': Child = Reports; break;
+      case '/spots/batemansbay': Child = Reports; break;
       case '/about': Child = About; break;
       default:      Child = HeroImage;
     }
