@@ -56,6 +56,7 @@ const PartyWave = React.createClass({
     let Child
     switch (this.state.route) {
       case '/spots': Child = HeroImage; break;
+      //todo: make these spots dynamic
       case '/spots/easternbeaches': Child = Reports; break;
       case '/spots/northernbeaches': Child = Reports; break;
       case '/spots/batemansbay': Child = Reports; break;
@@ -65,6 +66,7 @@ const PartyWave = React.createClass({
 
     let route = this.state.route;
     let spots = this.state.spots;
+    let reports = this.state.reports;
 
   	return(
   		<div>
@@ -73,7 +75,8 @@ const PartyWave = React.createClass({
           spots={spots}
           fetchSpotReports={this.fetchSpotReports}/>
   			<div>
-  				<Child/>
+  				<Child
+           reports={reports}/>
   			</div>
   		</div>
   	)
