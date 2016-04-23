@@ -1,3 +1,3 @@
 # partywave
 
-info to come
+To run: npm start
