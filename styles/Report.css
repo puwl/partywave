@@ -3,22 +3,8 @@
 	display: inline-block;
 }
 
-.report-header h2 {
-	float:left;
-	width:70%;
-}
 .report-header img {
-	float: right;
-	width: 15%;
-	text-align: center;
-    margin: 0 auto;
-    display: block;
 	text-align: center;
     margin: 0 auto;
     display: block;
 }
-
-.report-description {
-	clear: both;
-}
-
