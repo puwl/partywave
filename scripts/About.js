@@ -5,7 +5,9 @@ require("../styles/About.css");
 const About = React.createClass({
   render(){
     return (
-      <div></div>
+      <div className="about">
+      	<h1>About PartyWave</h1>
+      </div>
     )
   }
 });

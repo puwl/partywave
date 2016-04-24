@@ -5,11 +5,15 @@ const Report = React.createClass({
 
 	reportIcon(report){
 		if(report.name == "SwellNet"){
-			return '../images/PW_logo.svg';
+			return '../images/swellnet_logo.svg';
 		}
 		if(report.name == "coastalWatch"){
-			return '../images/swellnet_logo.svg'
+			return '../images/coastal_logo.svg'
 		}
+	},
+
+	swellIcon(){
+		return '../images/icon_swell.svg';
 	},
 
 	reportClasses(report){
@@ -25,6 +29,7 @@ const Report = React.createClass({
 		let report = this.props.report;
 		let icon = this.reportIcon(report);
 		let classes = this.reportClasses(report);
+		let swellIcon = this.swellIcon();
 
 	    return (
 	      <div className={classes}>
@@ -36,7 +41,8 @@ const Report = React.createClass({
 
 	      	<div className="report-conditions">
 	      		<div className="swell">
-	      			
+	      			<img src={swellIcon}></img>
+	      			<span>{report.swellHeight}</span>
 	      		</div>
 	      		<div className="wind">
 
@@ -50,7 +56,7 @@ const Report = React.createClass({
 	      	</div>
 
 	      	<div className="report-description">
-	      		<p className="description">Description: {this.props.report.content}</p>
+	      		<p className="description">Description: {report.content}</p>
 	      	</div>
 
 	      </div>
