@@ -1,6 +1,8 @@
 .report {
 	width: 49%;
 	display: inline-block;
+  padding: 2%;
+  box-sizing: border-box;
 }
 
 .report-header h2 {
@@ -16,6 +18,11 @@
 .report-header-content{
   width: 49%;
   display: inline-block;
+  vertical-align: top;
+}
+
+.report-header-content img{
+  width: 40%;
 }
 
 .reportName{
@@ -33,4 +40,39 @@
   font-weight: 400;
   font-size: 1.4em;
   color: #cecece;
+}
+
+.report-conditions {
+  margin-top: 3em;
+}
+
+.condition {
+  display: inline-block;
+  margin-right: 3em;
+  width: 20%;
+}
+
+.condition img, .condition span {
+  display: block;
+}
+
+.condition img {
+  width: 100%;
+}
+
+.condition span {
+  padding-top: 0.5em;
+  text-align: center;
+  text-decoration: uppercase;
+  font-weight: bold;
+}
+
+.report-description {
+  margin-top: 3em;
+  font-size: 1.3em;
+  line-height: 1.4;
+}
+
+.report-description .description-title{
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@ const Report = React.createClass({
 			return '../images/swellnet_logo.svg';
 		}
 		if(report.name == "coastalWatch"){
-			return '../images/coastal_logo.svg'
+			return '../images/coastal_logo.svg';
 		}
 	},
 	swellIcon(){
@@ -50,19 +50,19 @@ const Report = React.createClass({
 	      	</div>
 
 	      	<div className="report-conditions">
-	      		<div className="swell">
+	      		<div className="condition swell">
 	      			<img src={swellIcon}></img>
-	      			<span>{report.swellHeight}</span>
+	      			<span>{report.swellHeight}FT {report.swellDirection}</span>
 	      		</div>
 
-	      		<div className="wind">
+	      		<div className="condition wind">
 	      			<img src={windIcon}></img>
-	      			<span>{report.windSpeed}</span>
+	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
 	      		</div>
 	      	</div>
 
 	      	<div className="report-description">
-	      		<p className="description">Description: {report.content}</p>
+	      		<p className="description"><span className="description-title">DESCRIPTION:</span> {report.content}</p>
 	      	</div>
 
 	      </div>
