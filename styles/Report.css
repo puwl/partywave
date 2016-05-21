@@ -3,8 +3,34 @@
 	display: inline-block;
 }
 
+.report-header h2 {
+  text-transform: uppercase;
+}
+
 .report-header img {
 	text-align: center;
     margin: 0 auto;
     display: block;
+}
+
+.report-header-content{
+  width: 49%;
+  display: inline-block;
+}
+
+.reportName{
+  display: inline-block;
+  border-bottom: 3px solid yellow;
+}
+
+.reportName h2 {
+  margin-bottom: 3px;
+}
+
+.reportDate {
+  display: block;
+  padding-top: 1em;
+  font-weight: 400;
+  font-size: 1.4em;
+  color: #cecece;
 }
