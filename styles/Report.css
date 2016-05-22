@@ -1,7 +1,6 @@
 .report {
 	width: 49%;
 	display: inline-block;
-  padding: 2%;
   box-sizing: border-box;
 }
 
@@ -27,7 +26,7 @@
 
 .reportName{
   display: inline-block;
-  border-bottom: 3px solid yellow;
+  border-bottom: 3px solid gold;
 }
 
 .reportName h2 {
@@ -50,7 +49,7 @@
 .condition {
   display: inline-block;
   margin-right: 3em;
-  width: 20%;
+  width: 10%;
 }
 
 .condition img, .condition span {
@@ -72,8 +71,29 @@
   margin-top: 3em;
   font-size: 1.3em;
   line-height: 1.4;
+  padding-right: 10%;
 }
 
 .report-description .description-title{
   font-weight: bold;
+}
+
+/*tablet*/
+@media screen and (max-width: 1023px){
+.recommendation {
+width: 100%;
+height: auto;
+}
+}
+/*mobile*/
+@media screen and (max-width: 767px){
+
+  .recommendations-container {
+    width: 90%;
+    padding: 5% 5%;
+  }
+
+  .recommendation .description {
+  font-size: 2em;
+  }
 }

@@ -32,7 +32,6 @@ const Reports = React.createClass({
 	      <div className="reports">
 	      	<div className="reportsTitle">
 	      		<h1>{reportsData.name}</h1>
-	      		<div className="wave-underline" style={waveUnderlineStyles}></div>
 	      	</div>
 	      	<div className="reports-container">
 	      		{reportsInfo}
