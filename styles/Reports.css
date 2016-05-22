@@ -19,11 +19,11 @@
 
 .reports .wave-underline{
   height: 10px;
-  background-repeat: repeat-x;
   display: inline-block;
   width: 100%;
 }
 
 .reports-container {
   margin-top: 2em;
+  display: flex;
 }

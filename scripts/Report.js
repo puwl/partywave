@@ -12,10 +12,10 @@ const Report = React.createClass({
 		}
 	},
 	swellIcon(){
-		return '../images/swellnet_logo.svg';
+		return '../images/icon_swell.svg';
 	},
 	windIcon(){
-		return '../images/swellnet_logo.svg';
+		return '../images/icon_wind.svg';
 	},
 	reportClasses(report){
 		if(report.name == "SwellNet"){
@@ -43,9 +43,6 @@ const Report = React.createClass({
 	      			<div className="reportDate">
 	      				<time datetime="2001-05-15T19:00">22/12/2015 06:00</time>
 	      			</div>
-	      		</div>
-	      		<div className="report-header-content">
-	      			<img src={icon}></img>
 	      		</div>
 	      	</div>
 
