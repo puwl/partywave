@@ -25,7 +25,7 @@ const PartyWave = React.createClass({
   },
 
   fetchSpots(){
-    request({method:'GET', url:'http://combo.azurewebsites.net/spots/', body:'{"relaxed":true}', json:true}, on_response);
+    request({method:'GET', url:'http://surfapi.cloudapp.net/spots/', body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
     function on_response(er, response, body) {
       if(er){
@@ -39,7 +39,7 @@ const PartyWave = React.createClass({
   fetchSpotReports(spot){
     spot = spot.toLowerCase().replace(/\s/g, '');
     let spotPath = `#${this.state.route}/${spot}`;
-    let url = `http:\/\/combo.azurewebsites.net/spots/${spot}`;
+    let url = `http:\/\/surfapi.cloudapp.net/spots/${spot}`;
     request({method:'GET', url:url, body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
     function on_response(er, response, body) {
@@ -59,7 +59,7 @@ const PartyWave = React.createClass({
       //todo: make these spots dynamic
       case '/spots/easternbeaches': Child = Reports; break;
       case '/spots/northernbeaches': Child = Reports; break;
-      case '/spots/batemansbay': Child = Reports; break;
+      case '/spots/southcoast': Child = Reports; break;
       case '/about': Child = About; break;
       default:      Child = HeroImage;
     }
