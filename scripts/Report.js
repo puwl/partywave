@@ -50,7 +50,7 @@ const Report = React.createClass({
 	      	<div className="report-conditions">
 	      		<div className="condition swell">
 	      			<img src={swellIcon}></img>
-	      			<span>{report.swellHeight}FT {report.swellDirection}</span>
+	      			<span>{report.swellHeight} {report.swellDirection}</span>
 	      		</div>
 
 	      		<div className="condition wind">
