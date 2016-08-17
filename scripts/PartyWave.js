@@ -38,16 +38,20 @@ const PartyWave = React.createClass({
 
   fetchSpotReports(spot){
     spot = spot.toLowerCase().replace(/\s/g, '');
-    let spotPath = `#${this.state.route}/${spot}`;
     let url = `http:\/\/combo.azurewebsites.net/spots/${spot}`;
-    request({method:'GET', url:url, body:'{"relaxed":true}', json:true}, on_response);
     let _this = this;
+
+    request({method:'GET', url:url, body:'{"relaxed":true}', json:true}, on_response);
+
     function on_response(er, response, body) {
       if(er){
         throw er;
       }else {
+        if(window.location.hash != '#/spots/' + spot){
+          let spotPath = `#${_this.state.route}/${spot}`;
+          window.location.href = spotPath;
+        }
         _this.setState({reports:body});
-        window.location.href = spotPath;
       }
     }
   },
@@ -76,6 +80,7 @@ const PartyWave = React.createClass({
           fetchSpotReports={this.fetchSpotReports}/>
   			<div>
   				<Child
+           fetchSpotReports={this.fetchSpotReports}
            reports={reports}/>
   			</div>
   		</div>

@@ -8,36 +8,43 @@ const Reports = React.createClass({
 		return '../images/underline_waaves.svg';
 	},
 
+	getReports(){
+		if(!this.props.reports){
+			let spot = window.location.hash.split('/')[2];
+			console.log('calling fetch spot reports from reportsjs')
+			this.props.fetchSpotReports(spot)
+		}else {
+			return this.props.reports
+		}
+	},
+
 	render(){
-
+		let reports = this.getReports()
 		let waveUnderlineImage = this.waveUnderlineImage();
-
-		let waveUnderlineStyles = {
-  		backgroundImage: 'url(' + waveUnderlineImage + ')'
-		};
-
-		let reportsData = this.props.reports;
+		let waveUnderlineStyles = { backgroundImage: 'url(' + waveUnderlineImage + ')'};
 		let reportsInfo = [];
 
-		for (var i = 0; i < reportsData.reports.length; i++) {
-			var report = reportsData.reports[i];
-		  	reportsInfo.push(
-		  		<Report
-		  			key={i}
-		  			report={report}/>
-		  	)
+		if(reports != undefined){
+			for (var i = 0; i < reports.reports.length; i++) {
+				var report = reports.reports[i];
+			  	reportsInfo.push(
+			  		<Report
+			  			key={i}
+			  			report={report}/>
+			  	)
+			 }
 		}
 
-	    return (
-	      <div className="reports">
-	      	<div className="reportsTitle">
-	      		<h1>{reportsData.name}</h1>
-	      	</div>
-	      	<div className="reports-container">
-	      		{reportsInfo}
-	      	</div>
-	      </div>
-	    )
+    return (
+    		<div className="reports">
+      	<div className="reportsTitle">
+      		<h1>{reports ? reports.name : 'No reports found' }</h1>
+      	</div>
+      	<div className="reports-container">
+      		{reportsInfo}
+      	</div>
+      </div>
+    )
 	}
 });
 
