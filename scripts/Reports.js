@@ -11,7 +11,6 @@ const Reports = React.createClass({
 	getReports(){
 		if(!this.props.reports){
 			let spot = window.location.hash.split('/')[2];
-			console.log('calling fetch spot reports from reportsjs')
 			this.props.fetchSpotReports(spot)
 		}else {
 			return this.props.reports
