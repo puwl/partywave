@@ -80,13 +80,39 @@
 
 /*tablet*/
 @media screen and (max-width: 1023px){
-.recommendation {
-width: 100%;
-height: auto;
+  .report {
+    display: block;
+    width: 100%;
+  }
+
+  .report-description{
+    padding-right: 0;
+  }
+
+  .recommendation {
+    width: 100%;
+    height: auto;
+  }
 }
-}
+
 /*mobile*/
 @media screen and (max-width: 767px){
+  .report-conditions {
+    margin-top: 1.5em;
+  }
+
+  .report-description {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+  }
+
+  .reportDate {
+    font-size: 1.2em
+  }
+
+  .condition {
+    width: 20%;
+  }
 
   .recommendations-container {
     width: 90%;
@@ -94,6 +120,6 @@ height: auto;
   }
 
   .recommendation .description {
-  font-size: 2em;
+    font-size: 2em;
   }
 }

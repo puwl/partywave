@@ -59,3 +59,25 @@ header a {
 .spotslist.hide {
 	display: none;
 }
+
+
+/*tablet*/
+@media screen and (max-width: 1023px){
+
+}
+
+/*mobile*/
+@media screen and (max-width: 767px){
+	nav {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.navlinksleft a {
+		margin-right: 2em;
+	}
+
+	.navlinksright a {
+		margin-right: 4em;
+	}
+}
