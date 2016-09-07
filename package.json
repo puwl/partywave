@@ -39,9 +39,7 @@
     "webpack-dev-server": "^1.14.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "browser-request": "^0.3.3"
-  },
-  "dependencies": {
+    "browser-request": "^0.3.3",
     "forever": "^0.15.2"
   }
 }
