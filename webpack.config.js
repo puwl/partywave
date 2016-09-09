@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
 
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:80',
@@ -18,7 +18,17 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
   ],
 
   resolve: {
