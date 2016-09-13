@@ -1,12 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
-
+var compressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
 
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
+    'webpack-dev-server/client?http://0.0.0.0:80',
     'webpack/hot/only-dev-server',
     './scripts/main.js'
   ],
@@ -18,7 +18,19 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    }),
+    new compressionPlugin({
+    })
   ],
 
   resolve: {
@@ -41,6 +53,8 @@ module.exports = {
   },
   devServer: {
     hot: true,
+    host: '0.0.0.0',
+    port: 80,
     stats: {
       chunkModules: false,
       colors: true

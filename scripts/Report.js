@@ -21,7 +21,7 @@ const Report = React.createClass({
 		if(report.name == "SwellNet"){
 			return 'swellnet report';
 		}
-		if(report.name == "coastalWatch"){
+		if(report.name == "CoastalWatch"){
 			return 'coastalwatch report'
 		}
 	},
@@ -31,6 +31,7 @@ const Report = React.createClass({
 		let classes = this.reportClasses(report);
 		let swellIcon = this.swellIcon();
 		let windIcon = this.windIcon();
+		let date = this.props.report.date.substring(0,16).replace(/[T]/g,' ');
 
 	    return (
 	      <div className={classes}>
@@ -41,7 +42,7 @@ const Report = React.createClass({
 	      				<h2>{report.name}</h2>
 	      			</div>
 	      			<div className="reportDate">
-	      				<time datetime="2001-05-15T19:00">22/12/2015 06:00</time>
+	      				<time>{date}</time>
 	      			</div>
 	      		</div>
 	      	</div>
@@ -49,7 +50,7 @@ const Report = React.createClass({
 	      	<div className="report-conditions">
 	      		<div className="condition swell">
 	      			<img src={swellIcon}></img>
-	      			<span>{report.swellHeight}FT {report.swellDirection}</span>
+	      			<span>{report.swellHeight} {report.swellDirection}</span>
 	      		</div>
 
 	      		<div className="condition wind">
