@@ -6,7 +6,15 @@ const About = React.createClass({
   render(){
     return (
       <div className="about">
-      	<h1>About PartyWave</h1>
+      	<div className="about-content">
+	      	<h1>Sydney surf reports all in one place</h1>
+	      	<p>PartyWave makes it easier to check Sydney’s surf reports
+	      		by putting them in one place for you. 
+	      	</p>
+	      	<p>Surf reports are updated every 30 minutes.
+	      		We currently scrape CoastalWatch and SwellNet.
+	      	</p>
+      	</div>
       </div>
     )
   }

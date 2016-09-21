@@ -15,4 +15,9 @@
 
 .spots-selection-container ul li {
 	padding: 0.4em 0;
+    cursor: pointer;
+}
+
+.spots-selection-container li:hover{
+    text-decoration: underline
 }
