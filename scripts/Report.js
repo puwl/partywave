@@ -63,8 +63,6 @@ const Report = React.createClass({
 	      		<p className="description">
 	      			<span className="description-title">DESCRIPTION:</span>
 	      			{report.content}
-	      			debugger
-	      			<span>Full report at</span>
 	      		</p>
 	      	</div>
 
