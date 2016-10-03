@@ -1,12 +1,18 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 const Spots = require('./Spots');
 require("../styles/Header.css");
+ReactGA.initialize('UA-83868683-1');
 
 const Header = React.createClass({
 
   handleSpotClick(e){
     let spot = e.currentTarget.innerHTML;
     this.props.fetchSpotReports(spot);
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'clicked ' + spot + ' report',
+    });
   },
 
   spotsList(){
