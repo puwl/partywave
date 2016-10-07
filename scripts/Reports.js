@@ -35,14 +35,14 @@ const Reports = React.createClass({
 		}
 
     return (
-    		<div className="reports">
-      	<div className="reportsTitle">
-      		<h1>{reports ? reports.name : 'No reports found' }</h1>
+    	<div className="reports">
+	      	<div className="reportsTitle">
+	      		<h1>{reports ? reports.name : 'No reports found' }</h1>
+	      	</div>
+	      	<div className="reports-container">
+	      		{reportsInfo}
+	      	</div>
       	</div>
-      	<div className="reports-container">
-      		{reportsInfo}
-      	</div>
-      </div>
     )
 	}
 });

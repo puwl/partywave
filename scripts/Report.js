@@ -64,6 +64,7 @@ const Report = React.createClass({
 	      			<span className="description-title">DESCRIPTION:</span>
 	      			{report.content}
 	      		</p>
+	      		<span> Full report on <a href={"https://www." + report.name + ".com"}>{report.name}</a></span>
 	      	</div>
 
 	      </div>
