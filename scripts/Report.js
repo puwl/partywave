@@ -62,14 +62,15 @@ const Report = React.createClass({
 	      	<div className="report-description">
 	      		<p className="description">
 	      			<span className="description-title">DESCRIPTION:</span>
-	      			{report.content}
+	      				{report.content}
 	      		</p>
+	      		<span className="fullReport">
+	      				<a href={report.url} target="_blank">Full report</a>
+	      		</span>
 	      	</div>
-
 	      </div>
 	    )
 	}
-
 });
 
 module.exports = Report;
