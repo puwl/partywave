@@ -14,6 +14,8 @@ const About = React.createClass({
 	      	<p>Surf reports are updated every 30 minutes.
 	      		We currently scrape CoastalWatch and SwellNet.
 	      	</p>
+          <p>We’d love to hear your feedback or suggestions</p>
+          <p><a href="mailto:contact@partywave.co">contact@partywave.co</a></p>
       	</div>
       </div>
     )
