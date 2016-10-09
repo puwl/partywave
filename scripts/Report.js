@@ -61,7 +61,7 @@ const Report = React.createClass({
 
 	      	<div className="report-description">
 	      		<p className="description">
-	      			<span className="description-title">DESCRIPTION:</span>
+	      			<span className="description-title">DESCRIPTION: </span>
 	      				{report.content}
 	      		</p>
 	      		<span className="fullReport">
