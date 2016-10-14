@@ -15,6 +15,13 @@ const Header = React.createClass({
     });
   },
 
+  handleAboutClick(){
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'clicked about page',
+    });
+  },
+
   spotsList(){
     let spots = this.props.spots;
     let spotsList = [];
@@ -73,7 +80,7 @@ const Header = React.createClass({
       	<nav>
       		<div className="navlinksleft">
             <a href="#/spots" className={spotsClasses}>Spots</a>
-			      <a href="#/about" className={aboutClasses}>About</a>
+			      <a href="#/about" className={aboutClasses} onClick={this.handleAboutClick.bind(this)}>About</a>
           </div>
     			<div className="navlinksright">
     				<a href="#/"><img src='../images/PW_logo.svg'></img></a>
