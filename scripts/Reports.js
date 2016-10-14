@@ -34,26 +34,16 @@ const Reports = React.createClass({
 			 }
 		}
 
-    return (
-    	<div className="reports">
-<<<<<<< HEAD
-      		<div className="reportsTitle">
-      			<h1>{reports ? reports.name.replace('-',' ') : 'No reports found' }</h1>
-      		</div>
-      		<div className="reports-container">
-      			{reportsInfo}
-      		</div>
-     	</div>
-=======
-	      	<div className="reportsTitle">
-	      		<h1>{reports ? reports.name : 'No reports found' }</h1>
-	      	</div>
-	      	<div className="reports-container">
-	      		{reportsInfo}
-	      	</div>
-      	</div>
->>>>>>> upstream/master
-    )
+	    return (
+	    	<div className="reports">
+	      		<div className="reportsTitle">
+	      			<h1>{reports ? reports.name.replace('-',' ') : 'No reports found' }</h1>
+	      		</div>
+	      		<div className="reports-container">
+	      			{reportsInfo}
+	      		</div>
+	     	</div>
+	    )
 	}
 });
 
