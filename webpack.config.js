@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:80',
+    'webpack-dev-server/client?http://127.0.0.1:8080',
     'webpack/hot/only-dev-server',
     './scripts/main.js'
   ],
@@ -50,8 +50,6 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    host: '0.0.0.0',
-    port: 80,
     stats: {
       chunkModules: false,
       colors: true
