@@ -1,5 +1,6 @@
 import React from 'react';
 const Report = require('./Report');
+const Forecast = require('./Forecast');
 require("../styles/Reports.css");
 
 const Reports = React.createClass({
@@ -37,10 +38,14 @@ const Reports = React.createClass({
 	    return (
 	    	<div className="reports">
 	      		<div className="reportsTitle">
-	      			<h1>{reports ? reports.name.replace('-',' ') : 'No reports found' }</h1>
+	      			<h1>{reports ? reports.name.replace('-',' ') + " Reports" : 'Loading reports...' }</h1>
 	      		</div>
 	      		<div className="reports-container">
 	      			{reportsInfo}
+	      		</div>
+	      		<div>
+	      			<h1>{reports ? reports.name.replace('-',' ') + " Forecast" : '' }</h1>
+	      			<Forecast/>
 	      		</div>
 	     	</div>
 	    )
