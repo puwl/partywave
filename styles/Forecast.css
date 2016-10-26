@@ -1,0 +1,12 @@
+.ForecastContainer{
+  margin-top: 2em;
+}
+
+.Forecast{
+  display: inline-block;
+  border-bottom: 3px solid gold;
+}
+
+.ForecastImage{
+  margin-top: 2em;
+}

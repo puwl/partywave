@@ -38,16 +38,17 @@ const Reports = React.createClass({
 	    return (
 	    	<div className="reports">
 	      		<div className="reportsTitle">
-	      			<h1>{reports ? reports.name.replace('-',' ') + " Reports" : 'Loading reports...' }</h1>
+	      			<h1>{reports ? reports.name.replace('-',' ') + " Reports" : 'Fetching reports...' }</h1>
 	      		</div>
 	      		<div className="reports-container">
 	      			{reportsInfo}
 	      		</div>
-	      		<div>
-	      			<h1>{reports ? reports.name.replace('-',' ') + " Forecast" : '' }</h1>
-	      			<Forecast/>
-	      		</div>
-	     	</div>
+	      		<div className="ForecastContainer">	
+		      			<h1 className = "Forecast">Forecast</h1>
+		      			<Forecast/>
+	     		</div>
+	      	</div>
+
 	    )
 	}
 });

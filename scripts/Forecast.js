@@ -10,7 +10,7 @@ const Forecast = React.createClass({
 		let ForecastImageUrl = this.ForecastImageUrl();
 
 	    return (
-	      <div>
+	      <div className="ForecastImage">
 	      	<img src={ForecastImageUrl}></img>
 	      </div>
 	    )
