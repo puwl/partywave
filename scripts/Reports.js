@@ -38,6 +38,7 @@ const Reports = React.createClass({
 	    	<div className="reports">
 	      		<div className="reportsTitle">
 	      			<h1>{reports ? reports.name.replace('-',' ') : 'No reports found' }</h1>
+	      			<div className="underline_waaves"></div>
 	      		</div>
 	      		<div className="reports-container">
 	      			{reportsInfo}

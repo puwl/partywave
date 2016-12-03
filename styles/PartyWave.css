@@ -1,4 +1,31 @@
 body {
 	margin: 0;
-	font-family: 'helvetica';
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3 {
+	font-family: 'Nunito', sans-serif;
+	text-transform: uppercase !important;
+	margin:0em;
+}
+h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.05em;
+	font-weight: bold;
+}
+h3 {
+	font-size: 0.95em;
+	font-weight: bold;
+}
+p {
+	font-size:0.95em;
+	font-weight: 300;
+}
+
+a:-webkit-any-link {
+	color: gold;
+	text-transform: uppercase;
+	text-decoration: none;
 }

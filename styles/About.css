@@ -1,10 +1,22 @@
 .about {
     position: absolute;
-    margin-top: 200px;
-    width: 100%;
+    margin-top: 150px;
+    margin-left: -25%;
+    width: 50%;
+    left: 50%;
 }
 
 .about-content {
 	text-align: center;
     margin: 0 10px;
+}
+
+.about-content-title {
+	margin: 0 8em 35px;
+}
+
+.about-content .underline_waaves{
+  background-image: url('/images/underline_waaves.svg');
+  width:100%;
+  height: 12px;
 }
