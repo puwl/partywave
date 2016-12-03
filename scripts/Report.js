@@ -9,7 +9,7 @@ const Report = React.createClass({
 		if(report.name == "SwellNet"){
 			return '../images/swellnet_logo.svg';
 		}
-		if(report.name == "CoastalWatch"){ //master is lower case c
+		if(report.name == "CoastalWatch"){ 
 			return '../images/coastal_logo.svg';
 		}
 	},
