@@ -97,6 +97,7 @@ const Report = React.createClass({
 	      		<span className="fullReport">
 	      				<a href={report.url} target="_blank" onClick={this.handleLeavingClick.bind(this, report.name)}>Full report</a>
 	      		</span>
+	      		
 	      		<div className="underline_waaves"></div>
 	      	</div>
 	      </div>

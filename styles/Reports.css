@@ -18,6 +18,7 @@
   background-image: url('/images/underline_waaves.svg');
   width:100%;
   height: 12px;
+  margin-bottom:2em;
 }
 
 .reports .wave-underline{
@@ -31,13 +32,16 @@
   display: flex;
 }
 
+.forecast-container {
+  width: 49%;
+}
+
+
 .report-description .fullReport a {
-  font-weight: 700;
   color: #7b7b7b;
 }
 
 .report-description .fullReport a:hover {
-  font-weight: 700;
   color: gold;
 }
 

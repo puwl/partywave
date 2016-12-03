@@ -10,22 +10,23 @@ const Forecast = React.createClass({
 		let ForecastImageUrl = this.ForecastImageUrl();
 
 	    return (
+	    	<div className="forecastContainer">
+	    		<div className="seabreeze">
 
-	    	<div className="report-description">
-	      		<div className="ForecastImage">
-	      			<img src={ForecastImageUrl}></img>
-	      		</div>
-	      		
-	      		<span className="fullReport">
-	      			<a href="http://www.reddit.com" target="_blank">Full forecast</a>
-	      		</span>
+		      		<div className="ForecastImage">
+		      			<img src={ForecastImageUrl}></img>
+		      		</div>
+		      		
+		      		<span className="fullReport">
+		      			<a href="http://www.seabreeze.com.au/weather/nsw/sydney" target="_blank">Full forecast</a>
+		      		</span>
 
-		      	<div className="underline_waaves"></div>
+			      	<div className="underline_waaves"></div>
+			    </div>
 	      	</div>
-
 	    )
 	},
-	handleLeavingClick(site){
+	handleLeavingClick(site){ //to do - track seabreeze clickthroughs
 		ReactGA.event({
       		category: 'Leaving site',
       		action: 'left partywave to view origial ' + site + ' report',

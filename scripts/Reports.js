@@ -37,17 +37,18 @@ const Reports = React.createClass({
 
 	    return (
 	    	<div className="reports">
+	      		
 	      		<div className="reportsTitle">
 	      			<h1>{reports ? reports.name.replace('-',' ') + " Reports" : 'Fetching reports...' }</h1>
 	      			<div className="underline_waaves"></div>
 	      		</div>
+
 	      		<div className="reports-container">
 	      			{reportsInfo}
 	      		</div>
-	      		<div className="ForecastContainer">	
-		      			<h3 className = "Forecast">Seabreeze</h3>
-		      			<Forecast/>
-	     		</div>
+
+	      			<h3 className = "Forecast">Seabreeze</h3>
+	      			<Forecast/>
 	      	</div>
 
 	    )

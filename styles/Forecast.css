@@ -1,6 +1,3 @@
-.ForecastContainer{
-  margin-top: 2em;
-}
 
 .Forecast{
   display: inline-block;
@@ -9,4 +6,27 @@
 
 .ForecastImage{
   margin-top: 2em;
+}
+
+.ForecastImage .fullReport {
+	margin-bottom: 2em;
+}
+
+.forecastContainer {
+	width: 50%;
+}
+
+.forecastContainer .fullReport a {
+  color: #7b7b7b;
+}
+
+.forecastContainer .fullReport a:hover {
+  color: gold;
+}
+
+.forecastContainer .underline_waaves {
+	margin-top: 20px;
+}
+
+.seabreze {
 }
