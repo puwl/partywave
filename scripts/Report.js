@@ -9,7 +9,7 @@ const Report = React.createClass({
 		if(report.name == "SwellNet"){
 			return '../images/swellnet_logo.svg';
 		}
-		if(report.name == "CoastalWatch"){
+		if(report.name == "CoastalWatch"){ //master is lower case c
 			return '../images/coastal_logo.svg';
 		}
 	},
@@ -24,7 +24,8 @@ const Report = React.createClass({
 	},
 	sunIcon(){
 		return '../images/icon_sun.svg';
-	},
+	}, 
+
 	reportClasses(report){
 		if(report.name == "SwellNet"){
 			return 'swellnet report';
@@ -76,10 +77,12 @@ const Report = React.createClass({
 	      			<div className="wind-icon"></div>
 	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
 	      		</div>
+
 	      		<div className="condition tide">
 	      			<div className="tide-icon"></div>
 	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
 	      		</div>
+
 	      		<div className="condition sun">
 	      			<div className="sun-icon"></div>
 	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>

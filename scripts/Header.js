@@ -84,10 +84,12 @@ const Header = React.createClass({
   			      <a href="#/about" className={aboutClasses} onClick={this.handleAboutClick.bind(this)}>About</a>
             </h1>
           </div>
-    			<div className="navlinksright">
+    		
+        	<div className="navlinksright">
     				<a href="#/"><img src='../images/PW_logo.svg'></img></a>
-    			</div>
-		    </nav>
+    			</div>       
+        </nav>
+        
         <div className={showSpotsList}>
           <h2>
             <Spots spotsList={spotsList}/>
