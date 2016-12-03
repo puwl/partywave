@@ -1,0 +1,54 @@
+.reports {
+	margin-top: 130px;
+  position: absolute;
+  margin-left: 120px;
+  margin-right: 30px;
+  margin-bottom: 120px;
+}
+
+.reportsTitle{
+  display: inline-block;
+}
+
+.reports h1 {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.reports .underline_waaves{
+  background-image: url('/images/underline_waaves.svg');
+  width:100%;
+  height: 12px;
+}
+
+.reports .wave-underline{
+  height: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.reports-container {
+  margin-top: 2em;
+  display: flex;
+}
+
+/*tablet*/
+@media screen and (max-width: 1023px){
+  .reports-container {
+    display: block;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 767px){
+  .reports {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+
+  .reports-container {
+    margin-top: 1em;
+  }
+}
+

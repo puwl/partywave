@@ -1,0 +1,142 @@
+.report {
+	width: 49%;
+	display: inline-block;
+  box-sizing: border-box;
+}
+
+.report-header-content{
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: 
+}
+
+.reportName{
+  display: inline-block;
+  border-bottom: 3px solid gold;
+}
+
+.reportName h2 {
+  margin-bottom: 3px;
+}
+
+.reportDate {
+  display: block;
+  padding-top: 0.7em;
+  color: #7b7b7b;
+}
+
+.report-header-logo {
+  width:37%;
+  text-align: right;
+  display: inline-block;
+}
+
+.report-conditions {
+  margin-top: 2em;
+  display: flex;
+}
+
+.condition {
+  display: inline-block;
+  margin-right: 15%;
+  width: 10%;
+}
+
+.condition img, .condition span {
+  display: block;
+}
+
+.condition img {
+  width: 100%;
+}
+
+.condition span {
+  padding-top: 0.5em;
+  text-align: center;
+  text-decoration: uppercase;
+  font-weight: bold;
+}
+.swell-icon, .wind-icon, .tide-icon, .sun-icon {
+  display: block;
+  width: 60px;
+  height: 58px;
+  text-indent: -99999px;
+}
+.swell-icon {
+  background-image: url('/images/icon_swell.svg');
+}
+.wind-icon {
+  background-image: url('/images/icon_wind.svg');
+}
+.tide-icon {
+  background-image: url('/images/icon_tide.svg');
+}
+.sun-icon {
+  background-image: url('/images/icon_sun.svg');
+}
+.swell-icon:hover, .wind-icon:hover, .tide-icon:hover, .sun-icon:hover{
+  background-position: 1px -57px;
+}
+
+.report-description {
+  margin-top: 3em;
+  line-height: 1.4;
+  padding-right: 15%;
+}
+
+.report-description .description-title{
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #7b7b7b;
+}
+
+.report-description .underline_waaves{
+  margin-top: 20px;
+}
+
+/*tablet*/
+@media screen and (max-width: 1023px){
+  .report {
+    display: block;
+    width: 100%;
+  }
+
+  .report-description{
+    padding-right: 0;
+  }
+
+  .recommendation {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 767px){
+  .report-conditions {
+    margin-top: 1.5em;
+  }
+
+  .report-description {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+  }
+
+  .reportDate {
+    font-size: 1.2em
+  }
+
+  .condition {
+    width: 20%;
+  }
+
+  .recommendations-container {
+    width: 90%;
+    padding: 5% 5%;
+  }
+
+  .recommendation .description {
+    font-size: 2em;
+  }
+}
