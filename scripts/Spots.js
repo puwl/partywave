@@ -9,7 +9,7 @@ const Spots = React.createClass({
 	        <ul>
 	          {this.props.spotsList}
 	        </ul>
-        </div>
+      </div>
     )
   }
 });

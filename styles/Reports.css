@@ -31,6 +31,16 @@
   display: flex;
 }
 
+.report-description .fullReport a {
+  font-weight: 700;
+  color: #7b7b7b;
+}
+
+.report-description .fullReport a:hover {
+  font-weight: 700;
+  color: gold;
+}
+
 /*tablet*/
 @media screen and (max-width: 1023px){
   .reports-container {

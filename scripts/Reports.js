@@ -45,7 +45,7 @@ const Reports = React.createClass({
 	      			{reportsInfo}
 	      		</div>
 	      		<div className="ForecastContainer">	
-		      			<h1 className = "Forecast">Forecast</h1>
+		      			<h3 className = "Forecast">Seabreeze</h3>
 		      			<Forecast/>
 	     		</div>
 	      	</div>

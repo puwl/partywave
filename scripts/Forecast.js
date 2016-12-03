@@ -10,10 +10,26 @@ const Forecast = React.createClass({
 		let ForecastImageUrl = this.ForecastImageUrl();
 
 	    return (
-	      <div className="ForecastImage">
-	      	<img src={ForecastImageUrl}></img>
-	      </div>
+
+	    	<div className="report-description">
+	      		<div className="ForecastImage">
+	      			<img src={ForecastImageUrl}></img>
+	      		</div>
+	      		
+	      		<span className="fullReport">
+	      			<a href="http://www.reddit.com" target="_blank">Full forecast</a>
+	      		</span>
+
+		      	<div className="underline_waaves"></div>
+	      	</div>
+
 	    )
+	},
+	handleLeavingClick(site){
+		ReactGA.event({
+      		category: 'Leaving site',
+      		action: 'left partywave to view origial ' + site + ' report',
+      	});
 	}
 });
 
