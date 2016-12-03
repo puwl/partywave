@@ -4,24 +4,11 @@
   box-sizing: border-box;
 }
 
-.report-header h2 {
-  text-transform: uppercase;
-}
-
-.report-header img {
-	text-align: center;
-    margin: 0 auto;
-    display: block;
-}
-
 .report-header-content{
   width: 49%;
   display: inline-block;
   vertical-align: top;
-}
-
-.report-header-content img{
-  width: 40%;
+  text-align: 
 }
 
 .reportName{
@@ -35,20 +22,24 @@
 
 .reportDate {
   display: block;
-  padding-top: 1em;
-  font-weight: 400;
-  font-size: 1.4em;
-  color: #cecece;
+  padding-top: 0.7em;
+  color: #7b7b7b;
+}
+
+.report-header-logo {
+  width:37%;
+  text-align: right;
+  display: inline-block;
 }
 
 .report-conditions {
-  margin-top: 3em;
+  margin-top: 2em;
   display: flex;
 }
 
 .condition {
   display: inline-block;
-  margin-right: 3em;
+  margin-right: 15%;
   width: 10%;
 }
 
@@ -67,15 +58,42 @@
   font-weight: bold;
 }
 
+.swell-icon, .wind-icon, .tide-icon, .sun-icon {
+  display: block;
+  width: 60px;
+  height: 58px;
+  text-indent: -99999px;
+}
+.swell-icon {
+  background-image: url('/images/icon_swell.svg');
+}
+.wind-icon {
+  background-image: url('/images/icon_wind.svg');
+}
+.tide-icon {
+  background-image: url('/images/icon_tide.svg');
+}
+.sun-icon {
+  background-image: url('/images/icon_sun.svg');
+}
+.swell-icon:hover, .wind-icon:hover, .tide-icon:hover, .sun-icon:hover{
+  background-position: 1px -57px;
+}
+
 .report-description {
   margin-top: 3em;
-  font-size: 1.3em;
   line-height: 1.4;
-  padding-right: 10%;
+  padding-right: 15%;
 }
 
 .report-description .description-title{
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #7b7b7b;
+}
+
+.report-description .underline_waaves{
+  margin-top: 20px;
 }
 
 /*tablet*/

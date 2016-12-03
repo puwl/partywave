@@ -1,23 +1,31 @@
 .spots-selection-container  {
 	background-color: #000;
 	z-index: 1000;
+    padding: 10px 120px 0px;
+}
+.spots-selection-container .underline_waaves{
+  background-image: url('/images/underline_waaves.svg');
+  width:100%;
+  height: 12px;
 }
 
 .spots-selection-container ul {
 	list-style-type: none;
-    color: #fff;
-    margin-left: 100px;
+    color: gold;
     padding-left: 0;
     margin-top: 0;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding-top: 1em;
+    display: inline-block;
 }
 
 .spots-selection-container ul li {
-	padding: 0.4em 0;
+	margin: 0.4em 0;
     cursor: pointer;
+    clear: both;
+    float: left;
 }
 
 .spots-selection-container li:hover{
-    text-decoration: underline
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }

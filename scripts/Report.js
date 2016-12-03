@@ -9,7 +9,7 @@ const Report = React.createClass({
 		if(report.name == "SwellNet"){
 			return '../images/swellnet_logo.svg';
 		}
-		if(report.name == "coastalWatch"){
+		if(report.name == "CoastalWatch"){ 
 			return '../images/coastal_logo.svg';
 		}
 	},
@@ -19,6 +19,13 @@ const Report = React.createClass({
 	windIcon(){
 		return '../images/icon_wind.svg';
 	},
+	tideIcon(){
+		return '../images/icon_tide.svg';
+	},
+	sunIcon(){
+		return '../images/icon_sun.svg';
+	}, 
+
 	reportClasses(report){
 		if(report.name == "SwellNet"){
 			return 'swellnet report';
@@ -39,6 +46,8 @@ const Report = React.createClass({
 		let classes = this.reportClasses(report);
 		let swellIcon = this.swellIcon();
 		let windIcon = this.windIcon();
+		let tideIcon = this.tideIcon();
+		let sunIcon = this.sunIcon();
 		let date = this.props.report.date.substring(0,16).replace(/[T]/g,' ');
 
 	    return (
@@ -47,22 +56,35 @@ const Report = React.createClass({
 	      	<div className="report-header">
 	      		<div className="report-header-content">
 	      			<div className="reportName">
-	      				<h2>{report.name}</h2>
+	      				<h3>{report.name}</h3>
 	      			</div>
 	      			<div className="reportDate">
 	      				<time>{date}</time>
 	      			</div>
 	      		</div>
+	      		<div className="report-header-logo">
+	      			<img src={icon}></img>
+	      		</div>
 	      	</div>
 
 	      	<div className="report-conditions">
 	      		<div className="condition swell">
-	      			<img src={swellIcon}></img>
+	      			<div className="swell-icon"></div>
 	      			<span>{report.swellHeight} {report.swellDirection}</span>
 	      		</div>
 
 	      		<div className="condition wind">
-	      			<img src={windIcon}></img>
+	      			<div className="wind-icon"></div>
+	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
+	      		</div>
+
+	      		<div className="condition tide">
+	      			<div className="tide-icon"></div>
+	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
+	      		</div>
+
+	      		<div className="condition sun">
+	      			<div className="sun-icon"></div>
 	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
 	      		</div>
 	      	</div>
@@ -75,6 +97,7 @@ const Report = React.createClass({
 	      		<span className="fullReport">
 	      				<a href={report.url} target="_blank" onClick={this.handleLeavingClick.bind(this, report.name)}>Full report</a>
 	      		</span>
+	      		<div className="underline_waaves"></div>
 	      	</div>
 	      </div>
 	    )
