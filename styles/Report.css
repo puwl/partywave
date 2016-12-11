@@ -34,13 +34,19 @@
 
 .report-conditions {
   margin-top: 2em;
-  display: flex;
+}
+
+.top-conditions, .bottom-conditions {
+  display:inline-block;
 }
 
 .condition {
   display: inline-block;
-  margin-right: 15%;
-  width: 10%;
+  margin-right: 40px;
+}
+
+.condition div {
+  margin: 0 auto;
 }
 
 .condition img, .condition span {
@@ -51,11 +57,11 @@
   width: 100%;
 }
 
-.condition span {
+.condition p {
   padding-top: 0.5em;
-  text-align: center;
-  text-decoration: uppercase;
+  margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 .swell-icon, .wind-icon, .tide-icon, .sun-icon {
@@ -113,6 +119,8 @@
   }
 }
 
+
+
 /*mobile*/
 @media screen and (max-width: 767px){
   .report-conditions {
@@ -124,12 +132,12 @@
     margin-top: 1.5em;
   }
 
-  .reportDate {
-    font-size: 1.2em
+  .seabreeze .fullReport {
+    font-size: 1.1em;
   }
 
-  .condition {
-    width: 20%;
+  .reportDate {
+    font-size: 1.2em
   }
 
   .recommendations-container {
@@ -139,5 +147,19 @@
 
   .recommendation .description {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-conditions, .bottom-conditions {
+    display:block;
+  }
+
+  .condition {
+    margin-right: 20px;
+  }
+
+  .bottom-conditions {
+    padding-top: 20px;
   }
 }

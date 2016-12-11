@@ -68,25 +68,30 @@ const Report = React.createClass({
 	      	</div>
 
 	      	<div className="report-conditions">
-	      		<div className="condition swell">
-	      			<div className="swell-icon"></div>
-	      			<span>{report.swellHeight} {report.swellDirection}</span>
-	      		</div>
-
-	      		<div className="condition wind">
-	      			<div className="wind-icon"></div>
-	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
-	      		</div>
-
-	      		<div className="condition tide">
-	      			<div className="tide-icon"></div>
-	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
-	      		</div>
-
-	      		<div className="condition sun">
-	      			<div className="sun-icon"></div>
-	      			<span>{report.windSpeed.toUpperCase()} {report.windDirection}</span>
-	      		</div>
+	      		<div className="top-conditions">
+		      		<div className="condition swell">
+		      			<div className="swell-icon"></div>
+		      			<p>{report.swellHeight.toUpperCase()}</p>
+		      			<p>{report.swellDirection}</p>
+		      		</div>
+		      		<div className="condition wind">
+		      			<div className="wind-icon"></div>
+		      			<p>{report.windSpeed.toUpperCase()}</p>
+		      			<p>{report.windDirection}</p>
+		      		</div>
+		      	</div>
+		      	<div className="bottom-conditions">	
+		      		<div className="condition tide">
+		      			<div className="tide-icon"></div>
+		      			<p>{report.windSpeed.toUpperCase()}</p>
+		      			<p>{report.windDirection}</p>
+		      		</div>
+		      		<div className="condition sun">
+		      			<div className="sun-icon"></div>
+		      			<p>{report.windSpeed.toUpperCase()}</p>
+		      			<p>{report.windDirection}</p>
+		      		</div>
+		      	</div>	
 	      	</div>
 
 	      	<div className="report-description">
