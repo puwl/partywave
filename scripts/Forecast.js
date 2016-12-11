@@ -10,12 +10,11 @@ const Forecast = React.createClass({
 		let ForecastImageUrl = this.ForecastImageUrl();
 
 	    return (
-	    	<div className="forecastContainer">
 	    		<div className="seabreeze">
 
-		      		<div className="ForecastImage">
-		      			<img src={ForecastImageUrl}></img>
-		      		</div>
+      				<h3 className = "forecast-title">Seabreeze</h3>
+
+		      		<img src={ForecastImageUrl}></img>
 		      		
 		      		<span className="fullReport">
 		      			<a href="http://www.seabreeze.com.au/weather/nsw/sydney" target="_blank">Full forecast</a>
@@ -23,7 +22,6 @@ const Forecast = React.createClass({
 
 			      	<div className="underline_waaves"></div>
 			    </div>
-	      	</div>
 	    )
 	},
 	handleLeavingClick(site){ //to do - track seabreeze clickthroughs

@@ -12,21 +12,41 @@
 	margin-bottom: 2em;
 }
 
-.forecastContainer {
-	width: 50%;
-}
-
-.forecastContainer .fullReport a {
-  color: #7b7b7b;
-}
-
-.forecastContainer .fullReport a:hover {
-  color: gold;
-}
-
-.forecastContainer .underline_waaves {
+.forecasts-container .underline_waaves {
 	margin-top: 20px;
 }
 
-.seabreze {
+.seabreeze {
+	width: 49%;
+	padding-right: 8%;
+	box-sizing: border-box;
 }
+
+.seabreeze img {
+	display: block;
+    padding: 31px 0;
+    width: 100%;
+}
+
+.forecast-title {
+	display: inline-block;
+	border-bottom: 3px solid gold;
+}
+
+/*tablet*/
+@media screen and (max-width: 1023px){
+  
+}
+
+/*mobile*/
+@media screen and (max-width: 767px){
+  .forecasts-container {
+    margin-top: 1em;
+  }
+
+  .seabreeze {
+  	display: block;
+  	width: 100%;
+  }
+}
+

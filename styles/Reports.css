@@ -37,11 +37,13 @@
 }
 
 
-.report-description .fullReport a {
+.report-description .fullReport a,
+.forecasts-container .fullReport a {
   color: #7b7b7b;
 }
 
-.report-description .fullReport a:hover {
+.report-description .fullReport a:hover,
+.forecasts-container .fullReport a:hover {
   color: gold;
 }
 
