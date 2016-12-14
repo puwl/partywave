@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var webpackManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -11,9 +12,8 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve('build'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: 'public/build',
+    filename: 'bundle-[hash].js'
   },
 
   plugins: [
@@ -27,7 +27,8 @@ module.exports = {
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new webpackManifestPlugin()
   ],
 
   resolve: {
