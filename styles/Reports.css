@@ -1,5 +1,5 @@
 .reports {
-	margin-top: 130px;
+	margin-top: 150px;
   position: absolute;
   margin-left: 120px;
   margin-right: 30px;
@@ -8,6 +8,10 @@
 
 .reportsTitle{
   display: inline-block;
+}
+
+.reports .reportsTitle .underline_waaves{
+  margin-bottom: 1em;
 }
 
 .reports h1 {
@@ -57,14 +61,18 @@
 /*mobile*/
 @media screen and (max-width: 767px){
   .reports {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 30px;
-    margin-top: 110px;
+    margin-top: 140px;
   }
 
   .reports-container {
     margin-top: 1em;
+  }
+
+  .report-header-logo {
+    width:49%;
   }
 }
 

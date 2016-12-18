@@ -29,3 +29,17 @@
     color: #fff;
     border-bottom: 2px solid #fff;
 }
+
+/*mobile*/
+@media screen and (max-width: 767px){
+  .spots-selection-container {
+    padding: 10px 20px 5px;
+
+  }
+
+   .spots-selection-container ul{
+    margin-bottom: 0;
+  }
+
+  
+}

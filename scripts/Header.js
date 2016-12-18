@@ -40,7 +40,7 @@ const Header = React.createClass({
 
   spotsClasses(){
     let spotsClasses;
-    if (this.props.route === "/spots") {
+    if (this.props.route === "/spots" || this.props.route.includes("/spots/")) {
       spotsClasses="spots-navlink selected";
     }else {
       spotsClasses="spots-navlink";
