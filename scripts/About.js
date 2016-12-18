@@ -13,16 +13,15 @@ const About = React.createClass({
               <div className="underline_waaves"></div>
           </div>
 
-	      	<p>PartyWave makes it easier to check Sydney’s surf reports
-	      		by putting them in one place for you. 
-	      	</p>
+	      	<p>PartyWave makes it easier to track Sydney surf conditions 
+          by putting multiple surf reports together in one handy website.</p>
 
-	      	<p>Surf reports are updated every 30 minutes.
-	      		We currently scrape CoastalWatch and SwellNet.
-	      	</p>
+	      	<p>Surf reports are updated every 30 minutes. 
+          We currently fetch data from CoastalWatch, SwellNet and SeaBreeze.</p>
 
-          <p>We’d love to hear your feedback or suggestions</p>
-          <p><a href="mailto:contact@partywave.co">contact@partywave.co</a></p>
+          <p>We’d love to hear your feedback or suggestions:</p>
+          <p><a href="mailto:contact@partywave.co">contact@partywave.co</a>
+          or <a href="https://www.facebook.com/PartyWaveSurf/">facebook</a></p>
 
       	</div>
       </div>
