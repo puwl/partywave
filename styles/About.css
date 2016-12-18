@@ -21,6 +21,15 @@
   height: 12px;
 }
 
+.about-content .links a {
+  color: #7b7b7b;
+}
+
+.links a:hover
+{
+  color: gold;
+}
+
 /*mobile*/
 @media screen and (max-width: 767px){
   .about {
