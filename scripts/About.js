@@ -14,7 +14,7 @@ const About = React.createClass({
           </div>
 
 	      	<p>PartyWave makes it easier to track Sydney surf conditions
-          by putting multiple surf reports in one handy website.</p>
+          by putting multiple surf reports together in one handy website.</p>
 
 	      	<p>Surf reports are updated every 30 minutes.</p> 
 
